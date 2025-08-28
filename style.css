@@ -1,0 +1,57 @@
+.medicine-table {
+        width: 80%;
+        margin: 30px auto;
+        border-collapse: collapse;
+        font-family: Arial, sans-serif;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    .medicine-table th, .medicine-table td {
+        border: 1px solid #ddd;
+        padding: 12px 16px;
+        text-align: left;
+    }
+    .medicine-table th {
+        background: linear-gradient(90deg, #4e54c8, #8f94fb);
+        color: #fff;
+        font-size: 1.1em;
+    }
+    .medicine-table tr:nth-child(even) {
+        background-color: #f6f6ff;
+    }
+    .medicine-table tr:hover {
+        background-color: #e0e7ff;
+        transition: 0.2s;
+    }
+
+    /* Stock Level Indicator */
+    #stock-level {
+        background-color: #e01919ff;
+        
+    }
+
+    .prescription-table {
+        width: 80%;
+        margin: 30px auto;
+        border-collapse: collapse;
+        font-family: Arial, sans-serif;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    .prescription-table th, .prescription-table td {
+        border: 1px solid #ddd;
+        padding: 12px 16px;
+        text-align: left;
+    }
+    .prescription-table th {
+        background: linear-gradient(90deg, #4e54c8, #8f94fb);
+        color: #fff;
+        font-size: 1.1em;
+    }
+    .prescription-table tr:nth-child(even) {
+        background-color: #f6f6ff;
+    }
+    .prescription-table tr:hover {
+        background-color: #e0e7ff;
+        transition: 0.2s;
+    }
+
+
