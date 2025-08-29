@@ -30,20 +30,20 @@ function beriSalam($investor, $symbol): void
     echo "Halo, nama saya <strong>$investor</strong>, Saya melabur saham dalam  <strong>$symbol</strong> tahun ini. <br>"; //paparkan nama investor dan symbol saham dibeli
     
     $sahamsemasainvestor = kiraSahamsemasainvestor($investor, $symbol); //wajib declare $sahamsemasainvestor untuk pass value daripada function kiraSahamsemasainvestor
-    $sahaminvestorbeli = kiraSahaminvestorbeli($investor, $symbol); //wajib declare $sahamsemasainvestor untuk pass value daripada function kiraSahaminvestorbeli
+    $sahaminvestorbeli = kiraSahaminvestorbeli($investor, $symbol); //wajib declare $kiraSahaminvestorbeli untuk pass value daripada function kiraSahaminvestorbeli
 
     echo "Nilai semasa pelaburan <strong>$investor</strong> dalam <strong>$symbol</strong> adalah RM$sahamsemasainvestor. <br>";
-    echo "Nilai saya beli saham <strong>$symbol</strong> adalah RM$sahaminvestorbeli.";
+    echo "Nilai <strong>$investor</strong> beli saham <strong>$symbol</strong> adalah RM$sahaminvestorbeli.";
 
 
     if ($sahamsemasainvestor > $sahaminvestorbeli) {
         $untung = $sahamsemasainvestor - $sahaminvestorbeli;
-        echo "<br> Saya untung sebanyak RM$untung.";
+        echo "<br> <strong>$investor</strong> untung sebanyak RM$untung.";
     } elseif ($sahamsemasainvestor < $sahaminvestorbeli) {
         $rugi = $sahaminvestorbeli - $sahamsemasainvestor;
-        echo "<br> Saya rugi sebanyak RM$rugi.";
+        echo "<br> <strong>$investor</strong> rugi sebanyak RM$rugi.";
     } else {
-        echo "<br> Saya tidak untung atau rugi.";
+        echo "<br> <strong>$investor</strong> tidak untung atau rugi.";
     }
 
 }
@@ -94,9 +94,11 @@ function kiraSahaminvestorbeli($investor, $symbol): float
 
 ?>
 
+<?php $int = 3; ?>
+
 <h1>
-    Ini adalah Account Saham <?php echo $portfolios[0]['investor']; ?>
+    Ini adalah Account Saham <?php echo $portfolios[$int]['investor']; ?>
 </h1>
 <h2>
-    <?php beriSalam($portfolios[0]['investor'], $portfolios[0]['symbol']); ?>
+    <?php beriSalam($portfolios[$int]['investor'], $portfolios[$int]['symbol']); ?>
 </h2>
